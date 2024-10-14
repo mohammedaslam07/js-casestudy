@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        label {
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center p-3 fw-bolder">Form Validation</h1>
+    </div>
+    <div class="container mt-4 ">
+        <div class="row">
+            <div class="col-6 ">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fs-6 fw-bold">Fisrt name</label>
+                    <input type="text" class="form-control" id="frstname" oninput="fistname('frstname','frsterror')"
+                        required>
+                    <span id="frsterror"></span>
+
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fs-6 fw-bold">Last Name</label>
+                    <input type="text" class="form-control" id="lstname" oninput="fistname('lstname','secerror')"
+                        required>
+                    <span id="secerror"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fs-6 fw-bold">Email</label>
+                    <input type="email" class="form-control" id="emaill" oninput="email_('emaill','emailerror')"
+                        required>
+                    <span id="emailerror"></span>
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fs-6 fw-bold">Mobile Number</label>
+                    <input type="text" class="form-control" id="mobnum" oninput="mob1_('mobnum','moberror')" required>
+                    <span id="moberror">'Enter the correct format! (10 digits, starts with 6, 7, 8, or 9) and (Into a
+                        10number)'</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fs-6 fw-bold">Password</label>
+                    <input type="password" class="form-control" id="password1" oninput="password_('password1','error1')"
+                        required>
+                    <span id="error1"></span>
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fs-6 fw-bold">Confirm Password</label>
+                    <input type="password" class="form-control" id="password2" oninput="password_('password2','error2')"
+                        required>
+                    <span id="error2"></span>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-12">
+                <label for="exampleInputEmail1" class="form-label fs-6 fw-bold">Address</label>
+                <div class="form-floating">
+
+                    <textarea class="form-control" placeholder="Leave a comment here" id="addresss"
+                        oninput="address_('addresss','errors')" style="height: 100px" required></textarea>
+                    <span id="errors"></span>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fs-6 fw-bold">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" oninput="DOB_('dob','erro10')" required>
+                    <span id="error10"></span>
+
+                </div>
+            </div>
+        </div>
+        <div class="border border-3 p-4 ">
+            <h5 for="" class="text-center fs-6 fw-bold">Gender</h5>
+            <div class="row mt-4">
+                <div class="col-4 text-center">
+                    <input type="radio" name="gen">
+                    <label for="gen">Male</label>
+                </div>
+                <div class="col-4 text-center">
+                    <input type="radio" name="gen">
+                    <label for="gen">Female</label>
+                </div>
+                <div class="col-4 text-center">
+                    <input type="radio" name="gen">
+                    <label for="gen">Others</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="border border-3 p-3 mt-3">
+            <h5 for="" class="text-center fs-6 fw-bold">Language</h5>
+            <div class="row mt-3 mb-3">
+                <div class="col-3 text-center">
+                    <input type="checkbox" name="gen">
+                    <label for="gen">Tamil</label>
+                </div>
+                <div class="col-3 text-center">
+                    <input type="checkbox" name="gen">
+                    <label for="gen">english</label>
+                </div>
+                <div class="col-3 text-center">
+                    <input type="checkbox" name="gen">
+                    <label for="gen">Spanish</label>
+                </div>
+                <div class="col-3 text-center">
+                    <input type="checkbox" name="gen">
+                    <label for="gen">Franch</label>
+                </div>
+
+            </div>
+        </div>
+        <div class="row mt-5 ">
+
+            <div class="col-6 ">
+                <h5 for="" class="fs-6 fw-bold">Qualification</h5>
+                <select class="form-select " aria-label="Default select example" required>
+                    <option selected>Select Qualification</option>
+                    <option value="1">10th Qualification</option>
+                    <option value="2">12th Qualification</option>
+                    <option value="3">UG Qualification</option>
+                </select>
+            </div>
+
+            <div class="col-6">
+                <h5 for="" class="fs-6 fw-bold">Place</h5>
+
+                <select class="form-select" aria-label="Default select example" required>
+                    <option selected>Select Place</option>
+                    <option value="1">Chennai</option>
+                    <option value="2">Coimbatore</option>
+                    <option value="3">Karaikudi</option>
+                    <option value="3">thrichy</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="mb-3">
+                    <h6 for="exampleInputEmail1" class="form-label fs-6 fw-bold">Date</h6>
+                    <input type="date" class="form-control" id="date" required>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 ">
+
+            <div class="col-6 ">
+                <label for="" class="fs-6 fw-bold">Course Name</label>
+                <select class="form-select " aria-label="Default select example" required>
+                    <option selected>Select Your Course</option>
+                    <option value="1">B.com</option>
+                    <option value="2">BCA</option>
+                    <option value="3">B.sc IT</option>
+                </select>
+            </div>
+
+            <div class="col-6">
+                <label for="" class="fs-6 fw-bold">Collage Name</label>
+
+                <select class="form-select" aria-label="Default select example" required>
+                    <option selected>Select Your Collage</option>
+                    <option value="1">JJ collage of arts and science</option>
+                    <option value="2">Jamal muhmad collage of arts and science</option>
+                    <option value="3">bishop hebber collage of arts and science</option>
+                    <option value="3">st.Joshap collage of arts and science</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label fs-6 fw-bold">Duration</label>
+                    <input type="time" class="form-control" id="" required>
+
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-6">
+                <label for="" class="fs-6 fw-bold">University</label>
+                <select class="form-select " aria-label="Default select example" required>
+                    <option selected>Select your University</option>
+                    <option value="1">Barathithasan university,thirchy</option>
+                    <option value="2">anna university</option>
+                    <option value="3">annamalai university</option>
+                </select>
+            </div>
+
+            <div class="col-6 border border-2 p-2">
+                <h2 class="fs-6 fw-bold">Upload an Image</h2>
+                <form id="uploadForm">
+                    <div class="form-group">
+                        <label for="fileInput">Choose an image (PNG, JPG):</label>
+                        <input type="file" class="form-control-file" id="fileInput" accept=".png, .jpg" required>
+
+                    </div>
+
+
+                </form>
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="scriptt.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
